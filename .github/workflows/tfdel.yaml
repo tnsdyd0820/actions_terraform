@@ -41,5 +41,8 @@ jobs:
         echo `pwd`
         echo "tfpath ${{ github.event.inputs.tfpath }}"
         echo "** Running Terraform Init**"
+        terraform init -migrate-state
+        
+        echo "** Running Terraform destroy**"
         terraform destroy
       working-directory: ${{ github.event.inputs.tfpath }}
