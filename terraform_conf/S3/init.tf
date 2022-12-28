@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 # S3 bucket for backend
-resource "aws_s3_bucket" "tfstate" {
+resource "aws_s3_bucket_versioning" "tfstate" {
   bucket = "sy_tf_storage"
 
   versioning {
