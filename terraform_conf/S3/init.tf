@@ -3,11 +3,11 @@ provider "aws" {
 }
 
 # S3 bucket for backend
-resource "aws_s3_bucket" "tfstate" { 
+resource "aws_s3_bucket" "ksy_tfstate" { 
   bucket = "sy_tf_storage"
 }
 resource "aws_s3_bucket_versioning" "tfstate" {
-  bucket = aws_s3_bucket.sy_tf_storage.bucket
+  bucket = aws_s3_bucket.ksy_tfstate.bucket
 
   versioning {
     enabled = true # Prevent from deleting tfstate file
