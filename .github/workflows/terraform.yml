@@ -52,8 +52,8 @@ jobs:
         echo "** Running Terraform Plan**"
         terraform plan 
 
-#   - name: terraform apply
-#     run: |
-#       echo "** Running Terraform Apply**"
-#       terraform apply -auto-approve
+    - name: terraform apply
+      run: |
+        echo "** Running Terraform Apply**"
+        terraform apply -auto-approve
       working-directory: ${{ github.event.inputs.tfpath }}
