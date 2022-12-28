@@ -51,7 +51,7 @@ jobs:
 
         echo "** Running Terraform Plan**"
         terraform plan 
-
+      working-directory: ${{ github.event.inputs.tfpath }}
     - name: terraform apply
       run: |
         echo "** Running Terraform Apply**"
