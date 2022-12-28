@@ -1,4 +1,4 @@
-name: terraform_aws_test
+name: terraform_aws_test_del
 
 on:
   workflow_dispatch:
