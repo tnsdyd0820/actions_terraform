@@ -2,6 +2,15 @@ provider "aws" {
   region  = "ap-northeast-2"
 }
 
+terraform {
+  backend "s3" {
+      bucket         = "ksy-tf-storage"
+      key            = "terraform/s3/main.tfstate"
+      region         = "ap-northeast-2"
+      encrypt        = true
+      dynamodb_table = "ksy-lock"
+  }
+}
 
 resource "aws_instance" "gitaction-test" {
   ami = "ami-06eea3cd85e2db8ce"
