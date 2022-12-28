@@ -44,5 +44,5 @@ jobs:
         terraform init -reconfigure 
         
         echo "** Running Terraform destroy**"
-        terraform destroy -lock=false -auto-approve
+        terraform destroy -auto-approve
       working-directory: ${{ github.event.inputs.tfpath }}
